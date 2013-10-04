@@ -11,18 +11,19 @@
 
 @implementation CTCircleGradient
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue
 {
-    self = [super initWithFrame:frame];
+    self = [super initWithFrame:[self initFrame]];
     if (self) {
         
-        self.layer.contents = (__bridge id)([[self generateRadial]CGImage]);
-        
+        self.layer.contents = (__bridge id)([[self generateRadialWithRed:red
+                                                                   green:green
+                                                                    blue:blue] CGImage]);
     }
     return self;
 }
 
-- (UIImage *)generateRadial
+- (UIImage *)generateRadialWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue
 {
     CGGradientRef gradient;
     CGColorSpaceRef colorSpace;
@@ -31,15 +32,18 @@
     CGFloat locations[6] = {0.0, 0.2, 0.4, 0.6, 0.8, 1.0};
     
     CGFloat components[24] = {0.0, 0.0, 0.0, 1.0,
-                              1.0, 0.0, 0.0, 1.0,
-                              1.0, 0.0, 0.0, 0.8,
-                              1.0, 0.0, 0.0, 0.6,
-                              1.0, 0.0, 0.0, 0.2,
-                              1.0, 0.0, 0.0, 0.0};
+                              red, green, blue, 1.0,
+                              red, green, blue, 0.8,
+                              red, green, blue, 0.6,
+                              red, green, blue, 0.2,
+                              red, green, blue, 0.0};
     
     colorSpace = CGColorSpaceCreateDeviceRGB();
     
-    gradient = CGGradientCreateWithColorComponents(colorSpace, components, locations, numberOfLocations);
+    gradient = CGGradientCreateWithColorComponents(colorSpace,
+                                                   components,
+                                                   locations,
+                                                   numberOfLocations);
     
     CGPoint startPoint;
     CGPoint endPoint;
@@ -82,6 +86,12 @@
     [fadeOut setRemovedOnCompletion:NO];
     
     [self.layer addAnimation:fadeOut forKey:@"fade"];
+}
+
+#pragma mark - Helpers
+- (CGRect)initFrame
+{
+    return CGRectMake(0.f, 0.f, 60.f, 60.f);
 }
 
 @end

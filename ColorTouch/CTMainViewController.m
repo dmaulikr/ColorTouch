@@ -35,7 +35,7 @@
     [super viewDidLoad];
 
     self.circleGradient = [[CTCircleGradient alloc]
-                           initWithFrame:CGRectMake(50.f, 50.f, 60.f, 60.f)];
+                           initWithRed:1.f green:0.f blue:0.f];
     [self.circleGradient fadeOutWithDuration:0];
     
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc]

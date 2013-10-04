@@ -10,6 +10,8 @@
 
 @interface CTCircleGradient : UIView
 
+- (id)initWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue;
+
 - (void)fadeInWithDuration:(CFTimeInterval)duration;
 - (void)fadeOutWithDuration:(CFTimeInterval)duration;
 
