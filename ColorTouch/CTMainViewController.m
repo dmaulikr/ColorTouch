@@ -3,7 +3,7 @@
 //  ColorTouch
 //
 //  Created by Eric Miller on 10/4/13.
-//  Copyright (c) 2013 Mutual Mobile. All rights reserved.
+//  Copyright (c) 2013 Frozen Panda. All rights reserved.
 //
 
 #import "CTMainViewController.h"
@@ -35,7 +35,9 @@
     [super viewDidLoad];
 
     self.circleGradient = [[CTCircleGradient alloc]
-                           initWithRed:1.f green:0.f blue:0.f];
+                           initWithRed:1.f
+                           green:0.f
+                           blue:0.f];
     [self.circleGradient fadeOutWithDuration:0];
     
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc]

@@ -3,7 +3,7 @@
 //  ColorTouchTests
 //
 //  Created by Eric Miller on 10/4/13.
-//  Copyright (c) 2013 Mutual Mobile. All rights reserved.
+//  Copyright (c) 2013 Frozen Panda. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
