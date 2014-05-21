@@ -7,23 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B9A3E8617FF55D100C1A566 /* CTCircleGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A3E8517FF55D100C1A566 /* CTCircleGradient.m */; };
-		6B9A3E8717FF55D100C1A566 /* CTCircleGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A3E8517FF55D100C1A566 /* CTCircleGradient.m */; };
 		6BD5635C17FF423200EF749D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD5635B17FF423200EF749D /* Foundation.framework */; };
 		6BD5635E17FF423200EF749D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD5635D17FF423200EF749D /* CoreGraphics.framework */; };
 		6BD5636017FF423200EF749D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD5635F17FF423200EF749D /* UIKit.framework */; };
 		6BD5636617FF423200EF749D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BD5636417FF423200EF749D /* InfoPlist.strings */; };
 		6BD5636817FF423200EF749D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5636717FF423200EF749D /* main.m */; };
-		6BD5636C17FF423200EF749D /* CTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5636B17FF423200EF749D /* CTAppDelegate.m */; };
 		6BD5636E17FF423200EF749D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BD5636D17FF423200EF749D /* Images.xcassets */; };
 		6BD5637517FF423300EF749D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD5637417FF423300EF749D /* XCTest.framework */; };
 		6BD5637617FF423300EF749D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD5635B17FF423200EF749D /* Foundation.framework */; };
 		6BD5637717FF423300EF749D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD5635F17FF423200EF749D /* UIKit.framework */; };
 		6BD5637F17FF423300EF749D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BD5637D17FF423300EF749D /* InfoPlist.strings */; };
 		6BD5638117FF423300EF749D /* ColorTouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5638017FF423300EF749D /* ColorTouchTests.m */; };
-		6BD5638C17FF425A00EF749D /* CTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5638B17FF425A00EF749D /* CTMainViewController.m */; };
-		6BD5638D17FF425B00EF749D /* CTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5638B17FF425A00EF749D /* CTMainViewController.m */; };
 		6BD5639417FF434B00EF749D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD5639317FF434B00EF749D /* QuartzCore.framework */; };
+		7B6F0247192CF03E00627C62 /* CTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F0244192CF03E00627C62 /* CTAppDelegate.m */; };
+		7B6F0248192CF03E00627C62 /* CTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F0244192CF03E00627C62 /* CTAppDelegate.m */; };
+		7B6F0249192CF03E00627C62 /* CTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F0246192CF03E00627C62 /* CTMainViewController.m */; };
+		7B6F024A192CF03E00627C62 /* CTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F0246192CF03E00627C62 /* CTMainViewController.m */; };
+		7B6F024E192CF09F00627C62 /* CTCircleGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F024D192CF09F00627C62 /* CTCircleGradient.m */; };
+		7B6F024F192CF09F00627C62 /* CTCircleGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F024D192CF09F00627C62 /* CTCircleGradient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6B9A3E8417FF55D100C1A566 /* CTCircleGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTCircleGradient.h; path = ColorTouch/CTCircleGradient.h; sourceTree = "<group>"; };
-		6B9A3E8517FF55D100C1A566 /* CTCircleGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTCircleGradient.m; path = ColorTouch/CTCircleGradient.m; sourceTree = "<group>"; };
 		6BD5635817FF423200EF749D /* ColorTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BD5635B17FF423200EF749D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6BD5635D17FF423200EF749D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -47,17 +46,19 @@
 		6BD5636517FF423200EF749D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6BD5636717FF423200EF749D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6BD5636917FF423200EF749D /* ColorTouch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ColorTouch-Prefix.pch"; sourceTree = "<group>"; };
-		6BD5636A17FF423200EF749D /* CTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTAppDelegate.h; sourceTree = "<group>"; };
-		6BD5636B17FF423200EF749D /* CTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTAppDelegate.m; sourceTree = "<group>"; };
 		6BD5636D17FF423200EF749D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6BD5637317FF423300EF749D /* ColorTouchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorTouchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BD5637417FF423300EF749D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6BD5637C17FF423300EF749D /* ColorTouchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ColorTouchTests-Info.plist"; sourceTree = "<group>"; };
 		6BD5637E17FF423300EF749D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6BD5638017FF423300EF749D /* ColorTouchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorTouchTests.m; sourceTree = "<group>"; };
-		6BD5638A17FF425A00EF749D /* CTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMainViewController.h; sourceTree = "<group>"; };
-		6BD5638B17FF425A00EF749D /* CTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMainViewController.m; sourceTree = "<group>"; };
 		6BD5639317FF434B00EF749D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7B6F0243192CF03E00627C62 /* CTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAppDelegate.h; sourceTree = "<group>"; };
+		7B6F0244192CF03E00627C62 /* CTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAppDelegate.m; sourceTree = "<group>"; };
+		7B6F0245192CF03E00627C62 /* CTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMainViewController.h; sourceTree = "<group>"; };
+		7B6F0246192CF03E00627C62 /* CTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMainViewController.m; sourceTree = "<group>"; };
+		7B6F024C192CF09F00627C62 /* CTCircleGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCircleGradient.h; sourceTree = "<group>"; };
+		7B6F024D192CF09F00627C62 /* CTCircleGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCircleGradient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,11 +121,8 @@
 		6BD5636117FF423200EF749D /* ColorTouch */ = {
 			isa = PBXGroup;
 			children = (
-				6BD5638E17FF430300EF749D /* Circle */,
-				6BD5636A17FF423200EF749D /* CTAppDelegate.h */,
-				6BD5636B17FF423200EF749D /* CTAppDelegate.m */,
-				6BD5638A17FF425A00EF749D /* CTMainViewController.h */,
-				6BD5638B17FF425A00EF749D /* CTMainViewController.m */,
+				7B6F024B192CF09F00627C62 /* CTCircle */,
+				7B6F0242192CF03E00627C62 /* SampleProject */,
 			);
 			path = ColorTouch;
 			sourceTree = "<group>";
@@ -160,14 +158,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6BD5638E17FF430300EF749D /* Circle */ = {
+		7B6F0242192CF03E00627C62 /* SampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				6B9A3E8417FF55D100C1A566 /* CTCircleGradient.h */,
-				6B9A3E8517FF55D100C1A566 /* CTCircleGradient.m */,
+				7B6F0243192CF03E00627C62 /* CTAppDelegate.h */,
+				7B6F0244192CF03E00627C62 /* CTAppDelegate.m */,
+				7B6F0245192CF03E00627C62 /* CTMainViewController.h */,
+				7B6F0246192CF03E00627C62 /* CTMainViewController.m */,
 			);
-			name = Circle;
-			path = ..;
+			path = SampleProject;
+			sourceTree = "<group>";
+		};
+		7B6F024B192CF09F00627C62 /* CTCircle */ = {
+			isa = PBXGroup;
+			children = (
+				7B6F024C192CF09F00627C62 /* CTCircleGradient.h */,
+				7B6F024D192CF09F00627C62 /* CTCircleGradient.m */,
+			);
+			path = CTCircle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,10 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B9A3E8617FF55D100C1A566 /* CTCircleGradient.m in Sources */,
+				7B6F024E192CF09F00627C62 /* CTCircleGradient.m in Sources */,
+				7B6F0249192CF03E00627C62 /* CTMainViewController.m in Sources */,
+				7B6F0247192CF03E00627C62 /* CTAppDelegate.m in Sources */,
 				6BD5636817FF423200EF749D /* main.m in Sources */,
-				6BD5636C17FF423200EF749D /* CTAppDelegate.m in Sources */,
-				6BD5638C17FF425A00EF749D /* CTMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,9 +285,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BD5638D17FF425B00EF749D /* CTMainViewController.m in Sources */,
+				7B6F024F192CF09F00627C62 /* CTCircleGradient.m in Sources */,
+				7B6F024A192CF03E00627C62 /* CTMainViewController.m in Sources */,
+				7B6F0248192CF03E00627C62 /* CTAppDelegate.m in Sources */,
 				6BD5638117FF423300EF749D /* ColorTouchTests.m in Sources */,
-				6B9A3E8717FF55D100C1A566 /* CTCircleGradient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
