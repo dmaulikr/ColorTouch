@@ -11,8 +11,7 @@
 
 @implementation CTCircleGradient
 
-- (id)initWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue
-{
+- (id)initWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue {
     self = [super initWithFrame:[self initFrame]];
     if (self) {
         
@@ -23,8 +22,7 @@
     return self;
 }
 
-- (UIImage *)generateRadialWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue
-{
+- (UIImage *)generateRadialWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue {
     CGGradientRef gradient;
     CGColorSpaceRef colorSpace;
     size_t numberOfLocations = 6;
@@ -56,16 +54,23 @@
     
     UIGraphicsBeginImageContext(self.frame.size);
     CGContextRef imageContext = UIGraphicsGetCurrentContext();
-    CGContextDrawRadialGradient(imageContext, gradient, startPoint, 0, endPoint, self.frame.size.width/2, 0);
+    CGContextDrawRadialGradient(imageContext,
+                                gradient,
+                                startPoint,
+                                0,
+                                endPoint,
+                                self.frame.size.width/2,
+                                0);
     UIImage *resultImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     return resultImage;
 }
 
+
 #pragma mark - Animatations
-- (void)fadeInWithDuration:(CFTimeInterval)duration
-{
+
+- (void)fadeInWithDuration:(CFTimeInterval)duration {
     CABasicAnimation *fadeIn = [CABasicAnimation animationWithKeyPath:@"opacity"];
     [fadeIn setFromValue:@0];
     [fadeIn setToValue:@1];
@@ -74,8 +79,7 @@
     [self.layer addAnimation:fadeIn forKey:@"fade"];
 }
 
-- (void)fadeOutWithDuration:(NSTimeInterval)duration
-{
+- (void)fadeOutWithDuration:(NSTimeInterval)duration {
     CABasicAnimation *fadeOut = [CABasicAnimation animationWithKeyPath:@"opacity"];
     [fadeOut setDelegate:self];
     [fadeOut setFromValue:@1];
@@ -88,9 +92,10 @@
     [self.layer addAnimation:fadeOut forKey:@"fade"];
 }
 
+
 #pragma mark - Helpers
-- (CGRect)initFrame
-{
+
+- (CGRect)initFrame {
     return CGRectMake(0.f, 0.f, 60.f, 60.f);
 }
 

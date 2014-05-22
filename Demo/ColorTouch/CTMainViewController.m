@@ -15,23 +15,20 @@
 
 @implementation CTMainViewController
 
-- (id)init
-{
+- (id)init {
     self = [super init];
     if (self) {
     }
     return self;
 }
 
-- (void)loadView
-{
+- (void)loadView {
     UIView *view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [view setBackgroundColor:[UIColor darkGrayColor]];
     self.view = view;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 
     self.circleGradient = [[CTCircleGradient alloc]
@@ -47,9 +44,10 @@
     [self.view addGestureRecognizer:panGesture];
 }
 
+
 #pragma mark - Gestures
-- (void)screenPan:(UIPanGestureRecognizer *)gesture
-{
+
+- (void)screenPan:(UIPanGestureRecognizer *)gesture {
     CGPoint point = [gesture locationInView:self.view];
     
     if (gesture.state == UIGestureRecognizerStateChanged) {
@@ -61,9 +59,10 @@
     }
 }
 
+
 #pragma mark - Touch Overrides
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     if (self.circleGradient.superview == nil) {
         [self.view addSubview:self.circleGradient];
     }
@@ -76,8 +75,7 @@
     [self.circleGradient fadeInWithDuration:0.3];
 }
 
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.circleGradient fadeOutWithDuration:0.2];
 }
 
