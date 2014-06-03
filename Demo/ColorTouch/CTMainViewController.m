@@ -36,27 +36,6 @@
                            green:0.f
                            blue:0.f];
     [self.circleGradient fadeOutWithDuration:0];
-    
-    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc]
-                                          initWithTarget:self
-                                          action:@selector(screenPan:)];
-    
-    [self.view addGestureRecognizer:panGesture];
-}
-
-
-#pragma mark - Gestures
-
-- (void)screenPan:(UIPanGestureRecognizer *)gesture {
-    CGPoint point = [gesture locationInView:self.view];
-    
-    if (gesture.state == UIGestureRecognizerStateChanged) {
-        self.circleGradient.center = point;
-    }
-    
-    if (gesture.state == UIGestureRecognizerStateEnded) {
-        [self.circleGradient fadeOutWithDuration:0.2];
-    }
 }
 
 
@@ -68,11 +47,17 @@
     }
     
     UITouch *touch = [touches anyObject];
-    CGPoint point = [touch locationInView:self.view];
+    CGPoint touchPoint = [touch locationInView:self.view];
     
-    self.circleGradient.center = point;
+    self.circleGradient.center = touchPoint;
     
-    [self.circleGradient fadeInWithDuration:0.3];
+    [self.circleGradient fadeInWithDuration:0.2];
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    CGPoint touchPoint = [touch locationInView:self.view];
+    self.circleGradient.center = touchPoint;
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
